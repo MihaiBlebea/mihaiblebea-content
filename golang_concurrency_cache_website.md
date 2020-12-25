@@ -12,6 +12,8 @@ Slug: golang-concurrent-multithreaded-server-with-cache
 
 ## Step 1. Build a simple server with GO
 
+Let's do this...
+
 To create the project, run this command:
 
 - `mkdir dog_ceo && cd ./dog_ceo && go mod init github.com/<your-github-username>/dog-ceo && touch main.go`
