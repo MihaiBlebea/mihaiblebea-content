@@ -1,15 +1,3 @@
----
-Title: Github for absolute beginners - How to get started with your first repo?
-Summary: If you just started to code, then git is not for you... That's what they told me. But does it still apply today?
-Image: /static/img/github.jpeg
-Tags:
-    - github
-    - repo
-    - coding
-    - devops
-Slug: github-for-beginners-first-repository
-Published: "2020-08-27 10:04:05"
----
 "If you just started to code, then git is not for you..."
 
 This statemenent is so wrong.
