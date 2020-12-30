@@ -3,6 +3,7 @@
         "title": "Update title again test clearing cache",
         "slug": "article-demo-test",
         "image_url": "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+        "video_url": "https://youtu.be/63f8pdAxVaI?rel=0",
         "description": "Recommend Products Your Customers Will Love with Our E-Commerce Integrations. Mailchimp Works with Your Favorite Apps & Web Services to Help Improve Your Marketing. Advanced Testing Tools. Real-Time Data Reports. Remarketing Ads. No Coding Required.",
         "content_url": "https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/github_beginners.md",
         "published": true,
