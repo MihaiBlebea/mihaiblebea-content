@@ -1,5 +1,3 @@
-This is just a test
-
 "If you just started to code, then git is not for you..."
 
 This statemenent is so wrong.
