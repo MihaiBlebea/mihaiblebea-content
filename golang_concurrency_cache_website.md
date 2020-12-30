@@ -1,15 +1,3 @@
----
-Title: Build a concurrent, concurrent server that can handle millions of requests with Golang
-Summary: This is the second article
-Image: https://thetravelvertical.com/wp-content/uploads/2019/11/dog-3822183_1920-1024x608.jpg
-Tags:
-    - golang
-    - cache
-    - concurrency
-Slug: golang-concurrent-multithreaded-server-with-cache
-# Published: 
----
-
 ## Step 1. Build a simple server with GO
 
 Let's do this...

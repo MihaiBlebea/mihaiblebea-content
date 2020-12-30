@@ -1,16 +1,3 @@
----
-Title: How to build infrastructure with code, using Terraform with Kubernetes - Part 1
-Summary: What is this infrastructure as code all about? If you ever had to deal with infrastructure built by somebody else and passed onto you without documentation, then this article is for you.
-Image: https://www.terraform.io/assets/images/og-image-large-e60c82fe.png
-Tags:
-    - terraform
-    - kubernetes
-    - infrastructure
-    - devops
-Slug: terraform-with-kubernetes-infrastructure-as-code-part-1
-Published: "2020-08-12 10:04:05"
----
-
 What is this infrastructure as code all about?
 
 Why can't we just do infrastructure the old way as we have done for ages?
