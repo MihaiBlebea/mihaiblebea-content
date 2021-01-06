@@ -266,7 +266,7 @@ In Go, this mechanism is called channel or go-channel.
 
 We will add a new timer from the `time` standard package. This timer will use a separate go-routine to count down and notify us when the time has expired via a go-channel.
 
-<img src="/static/svg/go_routines.svg" />
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/go_routines.svg" />
 
 Let's implment this in our code.
 
@@ -777,6 +777,6 @@ func main() {
 
 Notice how we are left with just 30 lines of code in our main file, and I am sure we could go even lower then that...
 
-If you want to see the complete code, please check the <a href="https://github.com/MihaiBlebea/go-quiz" taget="_blank">Github repo link here</a>.
+If you want to see the complete code, please check the [Github repo link here](https://github.com/MihaiBlebea/go-quiz).
 
 Let me know if you have any suggestions in the comments section below.

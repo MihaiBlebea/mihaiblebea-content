@@ -78,7 +78,7 @@ If you don't have `homebrew` installed, I suggest you start using it, because it
 
 You can find more information for installing homebrew here: 
 
-<a href="https://brew.sh/" target="_blank">Install homebrew</a>
+[Install homebrew](https://brew.sh/)
 
 Or just run this in the terminal: ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"```
 
@@ -96,7 +96,7 @@ Don't forget at the end to verify the installation with ```git --version``` comm
 
 ## Step 2 - Create your Github account (skip this step if you already have one)
 
-Go to <a href="https://github.com" target="_blank">Github.com</a> and create an account. Just follow the instructions and don't forget to confirm your email address.
+Go to [Github.com](https://github.com) and create an account. Just follow the instructions and don't forget to confirm your email address.
 
 Once you have your new shinny account, go to the **+** icon in the top right corner and select `New repository` - keep in mind that this might change in the future, but for now when I write this article it's still there 😂.
 
@@ -104,11 +104,11 @@ You will be directed to this page where you can select a name for your repositor
 
 Let's keep it simple for now, so just add a name and click the confirmation button.
 
-<img src="/static/img/github_account_step_1.png" />
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/github_account_step_1.png" />
 
 Next, you will see a bunch of instructions on how to push your code to github.
 
-<img src="/static/img/github_account_step_2.png" />
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/github_account_step_2.png" />
 
 You can see in the top left corner - the username (your profile name) and the name of the repository. 
 
@@ -236,7 +236,7 @@ You will get a confirmation message at the end.
 
 Congrats, you pushed your first code to github.
 
-<img src="/static/img/yeey.gif" />
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/yeey.gif" />
 
 ## Step 4 - Bonus - bundle everything into a single command
 

@@ -60,9 +60,9 @@ If keep on reading till the end, you will:
 
 - Digital Ocean API token - easy to get once you finished the step above
 
-- Terraform installation on your laptop - <a href="https://learn.hashicorp.com/tutorials/terraform/install-cli" target="_blank">TF installation guide</a>
+- Terraform installation on your laptop - [TF installation guide](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
-- Kubectl on your local laptop - <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl" target="_blank">Kubectl installation guide</a>
+- Kubectl on your local laptop - [Kubectl installation guide](https://kubernetes.io/docs/tasks/tools/install-kubectl)
 
 Also you need to know what are the different parts that compose Terraform.
 
@@ -90,7 +90,7 @@ Also...
 
 If you never used Terraform before, I suggest you start with the official documentation, which is by far one of the best docs I came across.
 
-<a href="https://www.terraform.io/docs/index.html" target="_blank">Start with the Terraform docs</a>
+[Start with the Terraform docs](https://www.terraform.io/docs/index.html)
 
 Now that we got that out of the way, let's have some fun!
 
@@ -114,7 +114,7 @@ A provider is just an abstraction between the Digital Ocean API and our **config
 
 There are many more `providers` from which you can choose and I highly recommend that you take a look over the list. Btw, did you know that you can create your own provider 😱? (we'll leave that for another time though)
 
-➡️ <a href="https://www.terraform.io/docs/providers/index.html" target="_blank">Terrafrom providers list</a>
+➡️ [Terrafrom providers list](https://www.terraform.io/docs/providers/index.html)
 
 You probably noticed that inside the provider block we have a couple of other configs.
 
