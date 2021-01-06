@@ -6,7 +6,7 @@ There are some developers that think that we somehow rely too much on tools in o
 
 Just take a look at how many different tools a modern developer must know just to stay on top of things...
 
-<img src="/static/img/devops.jpg" />
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/devops.jpg" />
 
 It's **trully amazing** how developers can master them all...
 
@@ -36,7 +36,7 @@ Cherry on the cake, the main platform engineer who holds the keys to all the inf
 
 You are left with **figuring out on yourself how the current infrastructure works** and how to deploy your code into production.
 
-<img src="/static/img/head_in_palm_statue.jpg">
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/head_in_palm_statue.jpg">
 
 This is the time when you would want a tool like **Terraform** to come to the rescue.
 
@@ -168,7 +168,7 @@ Or, in my case you will get an error saying that the DO api token is not valid ð
 
 > Don't forget to replace the dummy Digital Ocean API token with the real one
 
-<img src="/static/img/yeey.gif" />
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/yeey.gif" />
 
 YEEY! You got a Digital Ocean Kubernetes cluster ready to host your amazing app.
 
@@ -391,4 +391,4 @@ In **Part 2** we will add variables, outputs and start using Terraform modules t
 
 Stay close for part 2, where I will show you how to use Terraform variables to hide those passwords.
 
-<img src="/static/img/home_alone.jpg" />
+<img src="https://raw.githubusercontent.com/MihaiBlebea/mihaiblebea-content/master/media/home_alone.jpg" />
