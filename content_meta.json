@@ -31,7 +31,7 @@
         "created": "2020-12-26T18:09:52Z"
     },
     {
-        "title": "How to build infrastructure with code, using Terraform with Kubernetes - Part 1",
+        "title": "How to build infrastructure with code, using Terraform with Kubernetes",
         "slug": "terraform-with-kubernetes-infrastructure-as-code-part-1",
         "image_url": "https://www.terraform.io/assets/images/og-image-large-e60c82fe.png",
         "description": "What is this infrastructure as code all about? If you ever had to deal with infrastructure built by somebody else and passed onto you without documentation, then this article is for you.",
