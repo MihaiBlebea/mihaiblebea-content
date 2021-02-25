@@ -20,6 +20,8 @@ But before jumping into that...
 
 Code migration is the movement of programming code from one system to another. On the other hand, refactoring is a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behavior.
 
+<img src="https://media.tenor.com/images/67971361f3b7635f9e09fad336569d7e/tenor.gif">
+
 In this article we will cover the migration bit.
 
 There are three distinct levels of code migration with increasing complexity, cost and risk.
@@ -58,6 +60,8 @@ These are just some of the more important issues that you will have to deal with
 
 When working with legacy code, you never know what may be lurking beneath the calm look of the surface code...
 
+<img src="https://i.pinimg.com/originals/31/37/44/3137449d3225422201697bdf7c73b861.gif">
+
 Now that we talked about the problems, let's discuss the solution. The most important aspect of a migration process is the preparation or how I like to call it, "The Plan".
 
 Let's imagine that you are called into your Project Owner's office, on a Monday morning, and given the task to migrate a legacy PHP 5.6 system to a newer PHP 7.4 platform in order to make it compatible with the newest MongoDB 4.4 database version.
@@ -77,9 +81,12 @@ We allowed ourselves around 2 months to complete the project and in the end we:
 
 But none of these would have been possible without the 8 steps plan.
 
+<img src="https://memegenerator.net/img/instances/82783501/ive-got-a-plan.jpg">
+
 Let's break it down...
 
 ## 1. Prepare the ground
+
 During the initial sprint (or sprints), try to get familiar as much as possible with the whole system architecture. If you need to migrate from platform A to platform B, then take your time and explore them. Take a closer look at what makes platform B a better home for your code.
 
 Check if there are any dependencies or hidden risks.
@@ -91,6 +98,7 @@ During this phase do some code exploration, and if time allows, put a software a
 If you are working in sprints, then it would be a good idea to align the first sprint with this exploration step.
 
 ## 2. Create a multi-disciplinary team
+
 Migrating a legacy code is not a job for a single developer. Even if you are the next Robert C. Martin of the PHP world and have more than 10 years of experience under your belt, you will probably need to rely on a team to help you complete this task.
 
 For a mobile application, you may require the help of an Android and an iOS developer and for a backend migration you may need the sharp mind of a platform engineer and at least two QA engineers.
@@ -100,6 +108,7 @@ Pick your team carefully as these are the people who will support you through th
 Here at Chip we are all about team-work and how we can improve the collaboration between our engineers.
 
 ## 3. Have a logging system in place
+
 If you don't already have a way of logging events coming out of your system, then you need to put aside time to implement one before starting this journey. At Chip we use DataDog which is one of the best solutions for monitoring cloud based applications.
 
 This step will be important in discovering critical parts of your application that needs to be migrated first, or dead code that can be removed. I am a big fan of using the condemned code technique, where you set logs around the code that you think may be not needed and keep an eye on the logs after a period of time to see if any were triggered.
@@ -109,6 +118,7 @@ You can also use the logs to discover bugs introduced by your migration and fix 
 At Chip we rely heavily on our logs to discover issues happening in the code, but also to make data driven decisions, and plan future features and improvements.
 
 ## 4. Automated code tests are your best allies
+
 Before even considering a migration or refactoring job, you need to have a good test coverage. If you plan to keep the same functionalities of the application while performing the migration, then you will need to lock down those functionalities by writing tests.
 
 I am not talking just about unit tests, but also about functional and end to end tests. The more tests you write at the beginning of your project, the least you will have to worry about introducing unwanted behaviour in your application. Or keeping the wanted behaviour...
@@ -116,6 +126,7 @@ I am not talking just about unit tests, but also about functional and end to end
 Consider starting writing higher level tests first as this will allow for a degree of flexibility when you consider changing the implementation of your code. If you are moving the code to a new platform, then there is no better feeling than running a simple command and getting the guarantee that your code still works as expected.
 
 ## 5. Decide on how often you need to deploy your code
+
 Are you going to deploy code as frequently as possible or just have a long standing branch that can be pushed live when the migration process is completed?
 
 From my experience, the best approach would be a combination of the two.
@@ -127,6 +138,7 @@ For example in a migration to a newer database version, some models may not work
 This is exactly what we decided to do as part of our migration at Chip. We deployed the code that was compatible with the older and still in production MongoDB version, but we kept the code that required the new version in a long standing branch, to be released after the database upgrade.
 
 ## 6. Break the process into tasks
+
 One issue that I encountered in my early career was dealing with tasks that were too big to handle and were blocking other team members from making progress.
 
 Try to break your migration process into tasks that have a single clear objective. This will help you and the rest of the team to work individually and in parallel on the same codebase.
@@ -138,6 +150,7 @@ At Chip we use Jira as a software development tool to track our tickets and orga
 As a developer, it's always nice when you can clearly see what your tasks are for the entire sprint.
 
 ## 7. Create a Q.A. regression plan
+
 Before doing the big leap of faith, you need to properly test your code and make sure it works in the same way as it used to work in the old platform.
 
 The developers can test their own code, of course, but we all know how we sometimes skip the parts that may be broken and put more emphasis on the parts that we know they "work". You may be very happy that all your tests pass, but this is not enough for a big and complex application.
@@ -149,13 +162,18 @@ To do this, you will need a regression test. A regression test can be completed 
 At Chip we employ the help of an entire team of skilled QA engineers to make sure our code is bug-free before reaching the production environment. The team is split across mobile (front end) and backend QA engineers and we are always looking for the best talent out there to enhance it.
 
 ## 8. Press the red button
+
 During our last migration at Chip, we had to bring our application down for a couple of hours, and have a team of engineers work during the late hours of Sunday evening to ensure the migration is completed successfully.
 
 First we updated our legacy MongoDB to the latest version by using a scripted approach that we tested during the previous week over and over again.
 
 Next, we deployed the updated code that was not compatible with the older database version and we did a "short" +2 hours session of testing behind closed doors to make sure everything works as expected and the code talks nicely with our new database.
 
-We mitigated the risk of this failing by having a plan in place, just in case. We were prepared that if the migration would not be successful, we could easily revert to the older database version and complete the job in the next week.
+We mitigated the risk of this failing by having a plan in place, just in case. 
+
+We were prepared that if the migration would not be successful, we could easily revert to the older database version and complete the job in the next week.
+
+<img src="https://i.gifer.com/5GNz.gif">
 
 Fortunately this was not the case and the last step of the migration worked seamlessly so the entire public API was again exposed to the public.
 
