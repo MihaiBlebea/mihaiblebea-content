@@ -20,7 +20,7 @@ But before jumping into that...
 
 Code migration is the movement of programming code from one system to another. On the other hand, refactoring is a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behavior.
 
-<img src="https://media.tenor.com/images/67971361f3b7635f9e09fad336569d7e/tenor.gif">
+<img src="https://i.gifer.com/8mx.gif">
 
 In this article we will cover the migration bit.
 
