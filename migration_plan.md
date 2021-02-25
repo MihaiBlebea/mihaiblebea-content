@@ -179,4 +179,11 @@ Fortunately this was not the case and the last step of the migration worked seam
 
 We ended up doing a final round of testing the next week and finally concluded that the migration was a success.
 
-At Chip, we are on a mission to build the best savings account in the world. Automated, intelligent, wealth-building all with an amazing UI for the mobile generation.
+At Chip, we are on a mission to build the best savings account in the world. 
+
+Automated, intelligent, wealth-building all with an amazing UI for the mobile generation.
+
+If you are a developer looking for your next opportunity or you are just looking for an intelligent way to save more money, then you have to check out <a href="https://getchip.uk" target="_blank">Chip</a>.
+
+<a href="https://getchip.uk" target="_blank"><img src="https://media.cdn.teamtailor.com/images/s3/teamtailor-production/gallery_picture-v1/image_uploads/39404b37-6e69-4e51-89c2-6ad11f8a98c9/original.jpeg">
+</a>
