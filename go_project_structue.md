@@ -24,7 +24,7 @@ But if you do any of those you will discover that Go is not such a flexible lang
 
 Let's explore...
 
-Go is a strong typed, compiled and OOP language. Well, sort of.
+> Go is a strong typed, compiled and OOP language. Well, sort of.
 
 There are structs that resemble classes, and functions attached to structs that may seem like methods.
 
@@ -131,11 +131,13 @@ One solution could be to split those two in separate applications that can be ru
 
 We could encapsulate those in two docker containers that talk with the same database.
 
-This means that we would implement a microservice architecture, and that brings some other problems that we need to take care of.
+This means that we would be implementing a microservice architecture, and that brings some other problems that we need to take care of.
 
-If you work in a bigger company, with more then one team of developer, then it probabily makes sense to go down the microservice rabbit hole.
+If you work in a bigger company, with more then one team of developer, then it probabily makes sense to go down that rabbit hole.
 
 But if this is your side project or you are the only developer in a small company, then microservices would bring more pain then benefits.
+
+> Just keep in mind that microservices are not a silver bullet.
 
 By chosing the microservices it means that you will have to duplicate your models (structs), repos and some of the logic.
 
