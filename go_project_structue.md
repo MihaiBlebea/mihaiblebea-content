@@ -149,7 +149,7 @@ Let's look at the middle ground.
 
 We will start by creating a `cmd` folder that will house different cli commands that we can use to start our application.
 
-I like to use a package called `cobra` that you can find more about by checking their <a href="" target="_blank">documentation here</a>.
+I like to use a package called `cobra` that you can find more about by checking their [documentation here](https://github.com/spf13/cobra).
 
 Our folder structure will look something like this:
 
