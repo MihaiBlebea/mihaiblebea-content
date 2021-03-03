@@ -2,13 +2,13 @@ This should be an easy one, but...
 
 I see some Go developers asking the question:
 
-"How should I structure my Go project?"
+*"How should I structure my Go project?"*
 
 There are 2 answers to this question:
 
-- The easy answer: Just structure your project in a way that makes sense for you.
+- **The easy answer:** Just structure your project in a way that makes sense for you.
 
-- The more complex answer: Structuring your Go application is harder that may seem at the first glance..
+- **The more complex answer:** Structuring your Go application is harder that may seem at the first glance..
 
 Both are valid answers so the question deserves a bit of attention.
 
@@ -16,13 +16,15 @@ First approach is quite a limited one.
 
 Of course you should structure your codebase depending on the size, scope and overall complexity of the project.
 
-If you are new to Go and coming from a language like PHP, Python or Javascript, then you are probabily used to coding in an OOP way.
+If you are new to Go and coming from a language like *PHP*, *Python* or *Javascript*, then you are probabily used to coding in an OOP way.
 
-This means that you will structure your project in layers (Models, Views and Controllers) - MVP, or why not, in Application, Domain and Infrastructure as in Hexagonal Architecture.
+This means that you will structure your project in layers (Models, Views and Controllers) - MVP, or why not, in Application, Domain and Infrastructure using the **Hexagonal Architecture**.
 
-But if you do any of those you will discover that Go is not such a flexible language to code in.
+But if you do any of those you will discover that Go is not such a flexible language to code in, and you may end up fighting against the current.
 
 Let's explore...
+
+## What you should know about Golang?
 
 > Go is a strong typed, compiled and OOP language. Well... sort of.
 
@@ -32,17 +34,19 @@ There are also infered interfaces, that we will cover in another article...
 
 But the main unit of encapsulation in Go is the "package", not the struct.
 
-This means that folders in Go represent a package, which provides encapsulation from the other packages and the main global scope.
+This means that each folder in Go represents a package, which provides encapsulation from the other packages and the main global scope.
 
 So folders have an important role in Go. More so then in other languages...
 
-For example, if you have a "models" folder, then your package will be also called models and you may ave a hard time trying to align the other packages in relation to this one.
+For example, if you have a `models` folder, then your package will be also called models and you may have a hard time trying to align the other packages in relation to this one.
 
 Now that we saw what the problem is, let's explore some solutions...
 
+## Bootstrap your application inside the main file
+
 Starting with the main entry point in you application, the `main.go` file should be used to bootstrap your other dependencies and packages.
 
-A "normal" main file could look like this:
+A `normal` main file could look like this:
 
 ```go
 package main
@@ -75,8 +79,10 @@ But what happens when you have more then a few dependencies?
 
 Then you will be stuck with a bloated main file that tries to do too much at once.
 
-One issue with this approach is that you may need to have two concurrent threads: 
+One issue with this approach is that you may need to have two concurrent threads:
+
 - one exposing an http server 
+
 - the other one running a background worker that sends slack messages based on entries in the database
 
 This means that you need to work out a way to run the worker and the server in separate goroutines.
@@ -127,6 +133,8 @@ Hmm... do we really want this to happen?
 
 Why would we want to bundle the worker and the server in the same application?
 
+## Going down the microservice rabbit hole
+
 One solution could be to split those two in separate applications that can be run in parallel.
 
 We could encapsulate those in two docker containers that talk with the same database.
@@ -146,6 +154,8 @@ By chosing the microservices it means that you will have to duplicate your model
 This can be a pain when you try to update some of that logic in 2 or 3 places in the same time...
 
 Let's look at the middle ground.
+
+## Using multiple commands to start applications using the same codebase
 
 We will start by creating a `cmd` folder that will house different cli commands that we can use to start our application.
 
@@ -267,6 +277,7 @@ USER nobody:nobody
 
 COPY --from=build_base --chown=nobody:nobody /tmp/app/out/go-project /app/go-project
 
+# Set the envs for the db connection
 ENV MYSQL_PASSWORD=${MYSQL_PASSWORD}
 ENV MYSQL_USER=${MYSQL_USER}
 ENV MYSQL_DATABASE=${MYSQL_DATABASE}
@@ -309,10 +320,10 @@ You can do this by connecting to one of the running docker containers and execut
 
 Please let me know in the comments section if you can think of any benefits or drawbacks of using this approach.
 
-I find this to be a nice compromise between complexity and easy of use.
+I find this to be a nice compromise between complexity and ease of use.
 
 Of course there are also some drawbacks with this one too, for example all your different containers will fetch data from the same database...
 
-For now, I found that this works well for me, but in the future and with a growing application, there is always scope for improvement.
+For now, I found that this works well for me and my projects, but in the future and with a growing codebase, there is always scope for improvement.
 
 Let me know in the comments section below if you find any edge cases with this approach and how would you improve it.
