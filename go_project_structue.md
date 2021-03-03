@@ -24,7 +24,7 @@ But if you do any of those you will discover that Go is not such a flexible lang
 
 Let's explore...
 
-> Go is a strong typed, compiled and OOP language. Well, sort of.
+> Go is a strong typed, compiled and OOP language. Well... sort of.
 
 There are structs that resemble classes, and functions attached to structs that may seem like methods.
 
@@ -316,14 +316,3 @@ Of course there are also some drawbacks with this one too, for example all your 
 For now, I found that this works well for me, but in the future and with a growing application, there is always scope for improvement.
 
 Let me know in the comments section below if you find any edge cases with this approach and how would you improve it.
-
-
-
-
-
-
-
-
-
-
-
