@@ -8,7 +8,7 @@ There are 2 answers to this question:
 
 - The easy answer: Just structure your project in a way that makes sense for you.
 
-- The more complex answer: Structuring your Go application is harder that may seem at the first glance. Let's have a 2 hour meeting about it.
+- The more complex answer: Structuring your Go application is harder that may seem at the first glance..
 
 Both are valid answers so the question deserves a bit of attention.
 
@@ -131,13 +131,15 @@ One solution could be to split those two in separate applications that can be ru
 
 We could encapsulate those in two docker containers that talk with the same database.
 
-This means that we will implement a microservice architecture, and that brings some other problems that we need to take care of.
+This means that we would implement a microservice architecture, and that brings some other problems that we need to take care of.
 
 If you work in a bigger company, with more then one team of developer, then it probabily makes sense to go down the microservice rabbit hole.
 
 But if this is your side project or you are the only developer in a small company, then microservices would bring more pain then benefits.
 
 By chosing the microservices it means that you will have to duplicate your models (structs), repos and some of the logic.
+
+<img src="https://149363654.v2.pressablecdn.com/wp-content/uploads/2014/02/surprise.gif" />
 
 This can be a pain when you try to update some of that logic in 2 or 3 places in the same time...
 
@@ -276,9 +278,26 @@ CMD ["./go-project", "worker"]
 You can choose to have different Dockerfiles for each of your individual commands, or beter yet, have one single dockerfile (as you are compiling the same codebase anyways) and just override the main `CMD` when running the containers.
 
 For example:
-- docker run -d --rm --name worker --entrypoint="./go-project worker" serbanblebea/go-project:0.1
-- docker run -d --rm -p 8081:8081 --name server --entrypoint="./go-project server" serbanblebea/go-project:0.1
-- docker run -d --rm -p 8082:8082 --name admin --entrypoint="./go-project admin" serbanblebea/go-project:0.1
+
+1. Run your worker docker container
+```bash 
+docker run -d --rm --name worker --entrypoint="./go-project worker" serbanblebea/go-project:0.1
+```
+
+2. Run your http server container
+
+```bash
+docker run -d --rm -p 8081:8081 --name server --entrypoint="./go-project server" serbanblebea/go-project:0.1
+```
+
+3. Run your admin section container
+```bash
+docker run -d --rm -p 8082:8082 --name admin --entrypoint="./go-project admin" serbanblebea/go-project:0.1
+```
+
+Or you can put all three into a `docker-compose.yaml` file together with your database and start them all at once.
+
+<img src="https://thumbs.gfycat.com/TangibleBreakableFrillneckedlizard-size_restricted.gif" />
 
 We just touched the top of the iceberg with this article, as there are many more benefits of the command structure.
 
@@ -293,6 +312,8 @@ I find this to be a nice compromise between complexity and easy of use.
 Of course there are also some drawbacks with this one too, for example all your different containers will fetch data from the same database...
 
 For now, I found that this works well for me, but in the future and with a growing application, there is always scope for improvement.
+
+Let me know in the comments section below if you find any edge cases with this approach and how would you improve it.
 
 
 
