@@ -292,19 +292,14 @@ You can choose to have different Dockerfiles for each of your individual command
 
 For example:
 
-1. Run your worker docker container
-```bash 
+```bash
+# Run your worker docker container
 docker run -d --rm --name worker --entrypoint="./go-project worker" serbanblebea/go-project:0.1
-```
 
-2. Run your http server container
-
-```bash
+# Run your http server container
 docker run -d --rm -p 8081:8081 --name server --entrypoint="./go-project server" serbanblebea/go-project:0.1
-```
 
-3. Run your admin section container
-```bash
+# Run your admin section container
 docker run -d --rm -p 8082:8082 --name admin --entrypoint="./go-project admin" serbanblebea/go-project:0.1
 ```
 
